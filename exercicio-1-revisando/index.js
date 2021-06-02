@@ -1,7 +1,6 @@
-const express = require('express');
+const app = require('express')();
 const { listJokes } = require('./controllers/JokeController');
 
-const app = express();
 const port = 3000;
 
 app.set('view engine', 'ejs');

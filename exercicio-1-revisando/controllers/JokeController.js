@@ -1,10 +1,10 @@
-const { getJokes } = require('../model/JokesModel');
+const { getJokes } = require('../model/Joke');
 
 const listJokes = async (_req, res) => {
   try {
     const joke = await getJokes();
 
-    return res.render('jokeView', { joke })
+    return res.render('jokeView.ejs', { joke })
   } catch (error) {
     return res.json({ message: 'Erro ao tentar buscar piada'})
   }
